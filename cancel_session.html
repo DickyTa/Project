@@ -1,0 +1,49 @@
+﻿<div id="tutoria">
+    <button style="text-align:center;height:110px;width:250px;background-color: Transparent; outline:none; border:none" onclick="location.href='{% url 'polls:s_detail' s %}'"> <font size="10">Tutoria</font> </button>
+</div>
+
+<div id="side">
+    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' s %}'">
+    </br>
+
+</div>
+
+<div id="content">
+    {% if t %}
+    <ul>
+        Input the date and starting time of the session which you would like to cancel:</br>
+    </ul>
+    <input type="text" name="date">
+    <input type="text" name="time">
+    </br>
+    <input type="button" value="Cancel Session" onclick="location.href='{% url 'polls:confirm_cancel' s %}'"></br>
+    {% else %}
+    <p>No tutors are available now.</p>
+    {% endif %}
+
+</div>
+
+<style type="text/css">
+    #tutoria {
+        height: 120px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #90EE90
+    }
+
+    #side {
+        height: 800px;
+        width: 200px;
+        float: left;
+        background-color: #cecece
+    }
+
+    #content {
+        height: 800px;
+        width: 940px;
+        background-color: #fffaf3;
+        float: left
+    }
+</style>
