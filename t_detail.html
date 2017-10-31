@@ -1,0 +1,250 @@
+
+<div id="tutoria">
+    <button style="text-align:center;height:110px;width:250px;background-color: Transparent; outline:none; border:none" onclick="location.href='{% url 'polls:s_detail' 1 %}'"> <font size="10">Tutoria</font> </button></div>
+
+
+</div>
+
+<div id="side">
+    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' %}'">
+        </br>
+</div>
+
+<div id="content">
+    {% if t %}
+    <ul>
+        
+        <b>Name: </b> {{ t.name }}</br>
+        <b>Rating: </b> {{ t.rating }}</br>
+        <b>Subject_tag: </b> {{ t.subject_tag }}</br>
+        <b>Contact Email: </b> {{ t.email }}</br>
+        <b>Hourly rate: </b> ${{ t.hourly_rate }} /hr</br>
+        <b>Wallet contain: </b>{{ t.w_amount }}</br>
+        </br>
+        </br>
+    <ul>
+
+    {% for i in t.gets %}
+    <b>Booked Time: </b> {{ i.start_time}} <b> By </b> {{ i.student_id.name }}
+    </br>
+    {% endfor %}
+    
+    <div class="month">
+        <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+                {{ t.date.month }} / {{t.date.year}}<br>
+                </li>
+        </ul>
+    </div>
+    <ul class="weekdays">
+        <li>  </li>
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+    </ul>
+    
+    <ul class="days">
+        <li>12:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>13:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>14:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>15:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>16:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>17:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>18:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>19:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="days">
+        <li>20:00</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+
+
+    {% else %}
+    <p>No Student is available.</p>
+    {% endif %}
+    
+</div>
+<style type="text/css">
+#tutoria{
+    height:120px;
+    width:1200px;
+    text-align:center;
+    line-height:100px;
+    font-size:30px;
+    font-weight:bold;
+    background-color:#90EE90
+}
+#side{
+    height:800px;
+    width:200px;
+    float:left;
+    background-color:#cecece
+}
+#content{
+    height:800px;
+    width:1000px;
+    background-color:#fffaf3;
+    float:left
+}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 50px 25px;
+    width: 94.2%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 11.5%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 2px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    height: 1.5%;
+    list-style-type: none;
+    display: inline-block;
+    width: 11.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
+
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white
+}
+</style>
