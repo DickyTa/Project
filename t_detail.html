@@ -1,12 +1,12 @@
 
 <div id="tutoria">
-    <button style="text-align:center;height:110px;width:250px;background-color: Transparent; outline:none; border:none" onclick="location.href='{% url 'polls:s_detail' 1 %}'"> <font size="10">Tutoria</font> </button></div>
+    <button style="text-align:center;height:110px;width:250px;background-color: Transparent; outline:none; border:none" onclick="location.href='{% url 'polls:s_detail' s %}'"> <font size="10">Tutoria</font> </button></div>
 
 
 </div>
 
 <div id="side">
-    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' %}'">
+    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' s %}'">
         </br>
 </div>
 

@@ -24,6 +24,9 @@ class Student(models.Model):
         return Booked_session.objects.filter(student_id = self)
     def date(self):
         return datetime.today()
+    def tmr(self):
+        
+        return datetime.today()
 
 
 class Tutor(models.Model):

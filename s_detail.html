@@ -2,7 +2,7 @@
     <button style="text-align:center;height:110px;width:250px;background-color: Transparent; outline:none; border:none"> <font size="10">Tutoria</font> </button></div>
 
 <div id="side">
-    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' %}'">
+    <input type="button" value="Search Tutor" onclick="location.href='{% url 'polls:t_list' s.getid %}'">
     </br>
     
 </div>
@@ -32,112 +32,161 @@
     </div>
     <ul class="weekdays">
         <li>  </li>
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-        <li>Su</li>
+        <li>Today</li>
+        <li>Day 2</li>
+        <li>Day 3</li>
+        <li>Day 4</li>
+        <li>Day 5</li>
+        <li>Day 6</li>
+        <li>Day 7</li>
     </ul>
-    
+    <ul class="days">
+        <li>08:00</li>
+        <li>{{s.tmr}}</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="days">
+        <li>09:00</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="days">
+        <li>10:00</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="days">
+        <li>11:00</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>    </ul>
     <ul class="days">
         <li>12:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>    </ul>
     <ul class="days">
         <li>13:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>14:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>15:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>16:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>17:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>18:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>19:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
     </ul>
     <ul class="days">
         <li>20:00</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="days">
+        <li>21:00</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="days">
+        <li>22:00</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>Y</li>
     </ul>
     
     {% else %}
@@ -215,25 +264,26 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .days {
-    padding: 2px 0;
+    padding: 2px;
+    height: 30px;
     background: #eee;
     margin: 0;
 }
 
 .days li {
-    height: 1.5%;
+    height: 5px;
     list-style-type: none;
     display: inline-block;
     width: 11.6%;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     font-size:12px;
     color:#777;
 }
 
 
 .days li .active {
-    padding: 5px;
+    padding: 3px 2;
     background: #1abc9c;
     color: white
 }
